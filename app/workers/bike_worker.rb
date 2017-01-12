@@ -1,4 +1,4 @@
-class BikepWorker
+class BikeWorker
   include Sidekiq::Worker
   include Sidetiq::Schedulable
 
@@ -7,6 +7,6 @@ class BikepWorker
   end
 
   def perform
-    # do stuff ...
+    # here will be sql model update instructions
   end
 end
