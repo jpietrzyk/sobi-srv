@@ -4,7 +4,7 @@ RSpec.describe ClientImporter do
 
     context '#process!' do
       let(:redis) { Communication.data }
-      let(:keys) { ["key1", "key2", "key3"] }
+      let(:keys) { %w(key1 key2 key3) }
       before do
         keys.each do |key|
           redis.set key, {

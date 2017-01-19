@@ -25,12 +25,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "haml-rails", "~> 0.9"
 
+gem 'puma'
+
 gem 'redis'
 gem 'redis-namespace'
 gem 'redis-rails'
 gem 'redis-rack-cache'
 
-gem 'unicorn'
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'validates_type'
 

@@ -7,6 +7,7 @@ class ClientWorker
   end
 
   def perform
-    Client.import_clients_data!
+    @client_importer ||= ClientImporter.new
+    @client_importer.process!
   end
 end
