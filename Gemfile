@@ -30,6 +30,8 @@ gem 'redis-namespace'
 gem 'redis-rails'
 gem 'redis-rack-cache'
 
+gem 'unicorn'
+
 gem 'validates_type'
 
 gem 'sidetiq'
