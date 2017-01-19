@@ -42,6 +42,11 @@ gem 'foreman'
 
 gem 'rubocop', '~> 0.46.0', require: false
 
+gem 'bootstrap', '~> 4.0.0.alpha6'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'

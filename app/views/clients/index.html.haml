@@ -1,2 +1,19 @@
-%h1 Clients#index
-%p Find me in app/views/clients/index.html.haml
+%h1 Bikes
+%table.table
+  %tr
+    %th id
+    %th bike
+    %th token
+  - @clients.each do |client|
+    %tr{title: client.token}
+      %td= client.id
+      %td= client.bike_id
+      %td
+        %pre
+          = "#{client.token[0..60]}..."
+          %button{type: 'button',
+                  data: { toggle: 'popover',
+                  placement: 'top',
+                  container: 'body',
+                  placement: 'left',
+                  content: client.token }} full
