@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'bikes/index'
+  get 'clients/index'
 
-  root 'bikes#index'
+  root 'clients#index'
 end

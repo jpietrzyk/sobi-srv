@@ -13,7 +13,8 @@
 
 ActiveRecord::Schema.define(version: 20170112062152) do
 
-  create_table "bikes", force: :cascade do |t|
+  create_table "clients", force: :cascade do |t|
+    t.integer  "bike_id",                null: false
     t.string   "token",      limit: 690, null: false
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false

@@ -30,12 +30,13 @@ Style/Documentation:
     - 'spec/**/*'
     - 'test/**/*'
     - 'app/controllers/application_controller.rb'
-    - 'app/controllers/bikes_controller.rb'
+    - 'app/controllers/clients_controller.rb'
     - 'app/helpers/application_helper.rb'
-    - 'app/models/bike.rb'
-    - 'app/workers/bike_worker.rb'
+    - 'app/models/client.rb'
+    - 'app/workers/client_worker.rb'
     - 'config/application.rb'
-    - 'db/migrate/20170112062152_create_bikes.rb'
+    - 'config/initializers/communication.rb'
+    - 'db/migrate/20170112062152_create_clients.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.

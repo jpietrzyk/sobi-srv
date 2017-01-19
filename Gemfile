@@ -30,6 +30,8 @@ gem 'redis-namespace'
 gem 'redis-rails'
 gem 'redis-rack-cache'
 
+gem 'validates_type'
+
 gem 'sidetiq'
 
 gem 'foreman'
@@ -37,10 +39,14 @@ gem 'foreman'
 gem 'rubocop', '~> 0.46.0', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.5'
   gem 'pry-rails'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 3.5'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'factory_girl_rails'
 end
 
 group :development do
