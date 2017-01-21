@@ -48,6 +48,9 @@ Style/Documentation:
     - 'config/initializers/communication.rb'
     - 'db/migrate/20170112062152_create_clients.rb'
     - 'lib/client_logger.rb'
+    - 'app/subscribers/client_subscriber.rb'
+    - 'config/initializers/pub_sub.rb'
+
 
 # Offense count: 1
 # Cop supports --auto-correct.

@@ -1,2 +1,2 @@
 web: bundle exec rails s
-worker: bundle exec sidekiq
+subscriber: bundle exec rake subscribe:clients
