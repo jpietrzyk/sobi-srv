@@ -1,30 +1,29 @@
 class ClientImporter
   def initialize
-    @clients = []
+
   end
 
   def process!
     Communication.data.keys.each do |key|
       msg = JSON.parse Communication.data.get(key)
       begin
-        @clients.push(
-          Client.create!(
-            bike_id: msg['bike_id'],
-            token: msg['token']
-          )
-        )
         Communication.data.del key
-      rescue StandardError => error
-        CLIENT_LOGGER.error std_error_text(key, error)
-      else
+        Client.create!(
+          bike_id: msg['bike_id'],
+          token: msg['token']
+        )
         CLIENT_LOGGER.info success_text(key)
+      rescue ActiveRecord::ActiveRecordError => error
+        CLIENT_LOGGER.error ar_error_text(key, error)
+        raise error
       end
     end
+    return true
   end
 
   private
 
-  def std_error_text(key, error)
+  def ar_error_text(key, error)
     %(
       there is a problem with client message (key: #{key})
       can't import client data, following erros occured:

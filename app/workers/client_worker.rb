@@ -7,7 +7,10 @@ class ClientWorker
   end
 
   def perform
-    @client_importer ||= ClientImporter.new
-    @client_importer.process!
+    importer.process!
+  end
+
+  def importer
+    @importer ||= ClientImporter.new
   end
 end

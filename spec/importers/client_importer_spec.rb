@@ -20,7 +20,8 @@ RSpec.describe ClientImporter do
       end
 
       it 'clears all client data from redis' do
-        expect(subject.process!).to match_array(keys)
+        subject.process!
+        expect(redis.keys.length).to eq(0)
       end
     end
   end
