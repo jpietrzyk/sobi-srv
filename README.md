@@ -1,8 +1,10 @@
 # SoBi Server
 
-First you should download this repo and run `bundle`.
+SoBi Server gets and displays informations delivered from mall command line applications - [SoBi Clients](https://github.com/jpietrzyk/sobi-cli).
 
-Then run `rake db:setup` to create your database.
+## Instalation
+
+First you should download this repo and run `bundle`. Then run `rake db:setup` to create your database. Set your redis configuration in `.env` file.
 
 Next you should install redis
 
@@ -19,4 +21,19 @@ or if you are on mac just:
   $ brew install redis
 ```
 
-To run dev server run `bundle exec foreman start` it will launch sidekiq and web server. 
+Run specs to check everything is ok `bundle exec rspec spec/`
+
+## Usage
+
+To run dev server run `bundle exec foreman start` it will launch sidekiq and web server, and will listen for clients data, and will display it on http://localhost:3000
+
+To see how to setup client check: https://github.com/jpietrzyk/sobi-cli
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/jpietrzyk/sobi_srv. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
