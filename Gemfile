@@ -50,13 +50,13 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'timecop'
 end
 
 group :test do
-  gem 'rspec-rails', '~> 3.5'
-  gem 'shoulda-matchers', '~> 3.1'
-  gem 'factory_girl_rails'
-  gem 'timecop'
+  gem 'rspec-rails', '~> 3.5'  
 end
 
 group :development do
