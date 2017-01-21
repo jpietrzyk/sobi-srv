@@ -12,7 +12,7 @@ if %w(development test).include? Rails.env
     t.fail_on_error = true
     # t.rspec_opts = '--format documentation'
     # t.rspec_opts << ' more options'
-    t.rcov = true
+    # t.rcov = true
   end
 
   RuboCop::RakeTask.new
