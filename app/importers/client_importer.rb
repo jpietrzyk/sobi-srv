@@ -1,7 +1,5 @@
 class ClientImporter
-  def initialize
-
-  end
+  def initialize; end
 
   def process!
     Communication.data.keys.each do |key|
@@ -18,7 +16,7 @@ class ClientImporter
         raise error
       end
     end
-    return true
+    true
   end
 
   private
