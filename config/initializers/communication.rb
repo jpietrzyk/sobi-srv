@@ -1,7 +1,12 @@
 module Communication
   class << self
     def data
-      @data ||= Redis::Namespace.new("sobi-#{Rails.env}", redis: Redis.new)
+      redis_connection = Redis.new(
+        host: ENV['REDIS_HOST'],
+        port: ENV['REDIS_PORT'],
+        password: ENV['REDIS_PASSWORD']
+      )
+      @data ||= Redis::Namespace.new("sobi-#{Rails.env}", redis: redis_connection)
     end
   end
 end
