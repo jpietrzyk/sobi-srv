@@ -1,12 +1,10 @@
 # SoBi Server
 
-SoBi Server gets and displays informations delivered from mall command line applications - [SoBi Clients](https://github.com/jpietrzyk/sobi-cli).
+SoBi Server gets and displays informations delivered from small commandline applications - [SoBi Clients](https://github.com/jpietrzyk/sobi-cli).
 
 ## Instalation
 
-First you should download this repo and run `bundle`. Then run `rake db:setup` to create your database. Set your redis configuration in `.env` file.
-
-Next you should install redis
+First you should download this repo and run `bundle`. Then run `rake db:setup` to create your database. Next you should install Redis
 
 on linux:
 ```
@@ -20,7 +18,7 @@ or if you are on mac just:
 ```
   $ brew install redis
 ```
-
+Set your redis configuration in `.env` file.
 Run specs to check everything is ok `bundle exec rspec spec/`
 
 ## Usage
