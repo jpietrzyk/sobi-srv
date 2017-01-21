@@ -1,4 +1,4 @@
-# SoBi Server
+# SoBi Server (pub/sub with Redis)
 
 SoBi Server gets and displays informations delivered from small commandline applications - [SoBi Clients](https://github.com/jpietrzyk/sobi-cli).
 
@@ -23,7 +23,7 @@ Run specs to check everything is ok `bundle exec rspec spec/`
 
 ## Usage
 
-To run dev server run `bundle exec foreman start` it will launch sidekiq and web server, and will listen for clients data, and will display it on http://localhost:3000
+To run dev server run `bundle exec foreman start` it will launch subscriber and web server. Messages will be displayed here: http://localhost:3000
 
 To see how to setup client check: https://github.com/jpietrzyk/sobi-cli
 
