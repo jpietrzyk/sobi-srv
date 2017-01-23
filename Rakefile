@@ -15,10 +15,11 @@ if %w(development test).include? Rails.env
     # t.rcov = true
   end
 
-  RuboCop::RakeTask.new
+  # RuboCop::RakeTask.new
 end
 
 task(:default).clear
 task default: [:rubocop, :spec]
+task default: [:spec]
 
 Rails.application.load_tasks
