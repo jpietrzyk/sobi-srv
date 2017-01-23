@@ -3,11 +3,11 @@ RSpec.describe ClientImporter do
     it { expect(subject).to respond_to(:process!) }
 
     context '#process!' do
-      let(:redis) { Communication.data }
+      let(:mr) { MockRedis.new }
       let(:keys) { %w(key1 key2 key3) }
       before do
         keys.each do |key|
-          redis.set key, {
+          mr.set key, {
             bike_id: rand(1..100),
             token: generate_token
           }.to_json
@@ -20,8 +20,10 @@ RSpec.describe ClientImporter do
       end
 
       it 'clears all client data from redis' do
+        Communication.data = mr
         subject.process!
-        expect(redis.keys.length).to eq(0)
+        
+        expect(mr.keys.length).to eq(0)
       end
     end
   end

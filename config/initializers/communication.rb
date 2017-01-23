@@ -8,5 +8,8 @@ module Communication
       )
       @data ||= Redis::Namespace.new("sobi-#{Rails.env}", redis: redis_connection)
     end
+    def data=(redis)
+      @data = redis
+    end
   end
 end
