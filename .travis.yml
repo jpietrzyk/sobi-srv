@@ -2,4 +2,6 @@ sudo: false
 language: ruby
 rvm:
   - 2.3.0
-before_install: gem install bundler -v 1.12.3
+before_install:
+  - gem install bundler -v 1.12.3
+  - mysql -e 'CREATE DATABASE sobi_test;'
