@@ -19,7 +19,7 @@ if %w(development test).include? Rails.env
 end
 
 task(:default).clear
-task default: [:rubocop, :spec]
+# task default: [:rubocop, :spec]
 task default: [:spec]
 
 Rails.application.load_tasks
