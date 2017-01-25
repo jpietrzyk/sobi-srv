@@ -53,11 +53,11 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'timecop'
+  gem "mock_redis"
 end
 
 group :test do
   gem 'rspec-rails', '~> 3.5'
-  gem "mock_redis"
 end
 
 group :development do

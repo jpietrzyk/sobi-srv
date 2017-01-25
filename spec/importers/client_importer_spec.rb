@@ -12,6 +12,8 @@ RSpec.describe ClientImporter do
             token: generate_token
           }.to_json
         end
+        Communication.data = mr
+        subject.process!
       end
 
       it 'imports client data to mysql db' do
@@ -20,9 +22,6 @@ RSpec.describe ClientImporter do
       end
 
       it 'clears all client data from redis' do
-        Communication.data = mr
-        subject.process!
-        
         expect(mr.keys.length).to eq(0)
       end
     end
